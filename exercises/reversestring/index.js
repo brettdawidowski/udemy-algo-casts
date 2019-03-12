@@ -4,15 +4,20 @@
 // --- Examples
 //   reverse('apple') === 'leppa'
 //   reverse('hello') === 'olleh'
-   reverse('Greetings!') === '!sgniteerG'
+//   reverse('Greetings!') === '!sgniteerG'
 
 
-
+/**
+ * Given a string, return a new string with the reversed 
+ * order of characters
+ * @param {string} str 
+ * @returns {string}
+ */
 function reverse(str) {
       /**
        * Solution #1:
-       * Array.prototype.reverse()
-       * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse
+       * `Array.prototype.reverse()`
+       * [@link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)
       */
       return str.split('').reverse().join('');
 
@@ -32,8 +37,8 @@ function reverse(str) {
 
       /**
        * Solution #3:
-       * Array.prototype.reduce()
-       * @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce
+       * `Array.prototype.reduce()`
+       * [@link](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce)
       */
       return str.split('').reduce((rev, char) => char + rev, '');
 
