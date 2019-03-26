@@ -12,6 +12,21 @@
 //   4
 //   buzz
 
-function fizzBuzz(n) {}
+function fizzBuzz(n) {
+      const divThree = i % 3 === 0 ? true : false;
+      const divFive = i % 5 === 0 ? true : false;
+
+      for (let i = 1; i <= n; i++){
+            if (divThree && divFive) {
+                  console.log('fizzbuzz');
+            } else if (divThree) {
+                  console.log('fizz');
+            } else if (divFive) {
+                  console.log('buzz');
+            } else {
+                  console.log(n);
+            }
+      }
+}
 
 module.exports = fizzBuzz;
