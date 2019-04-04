@@ -8,6 +8,30 @@
 // Example:
 //   fib(4) === 3
 
-function fib(n) {}
+
+// O(n)
+function fib(n) {
+      // Always know the first two will be 0, 1
+      const results = [0, 1];
+
+      // Increase next item by adding the two pervious items together [5, 8, 13]
+      for (let i = 2; i <= n; i++){
+            let a = results[i - 1];
+            let b = results[i - 2];
+
+            // Add together and append to array
+            results.push(a + b);
+      }
+      return results[results.length - 1];
+}
+
+
+// O(n)
+function fib(n) {
+      // n = 0 or n = 1
+      if (n < 2) return n;
+
+      return fib(n - 1) + fib(n - 2);
+}
 
 module.exports = fib;
