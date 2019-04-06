@@ -24,6 +24,25 @@
 
 const Queue = require('./queue');
 
-function weave(sourceOne, sourceTwo) {}
+function weave(sourceOne, sourceTwo) {
+      const q = new Queue();
+      
+      // While sourceOne or sourceTwo still has remaining items left in their queue
+      while (sourceOne.peek() || sourceTwo.peek()) {
+            // Checking to make sure sourceOne still had items left
+            if (sourceOne.peek()) {
+                  // Adding item to merged queue and removing it from sourceOne queue
+                  q.add(sourceOne.remove());
+            }
+            // Checking to make sure sourceTwo still had items left
+            if (sourceTwo.peek()) {
+                  // Adding item to merged queue and removing it from sourceTwo queue
+                  q.add(sourceTwo.remove());
+            }
+      }
+
+      return q;
+
+}
 
 module.exports = weave;
