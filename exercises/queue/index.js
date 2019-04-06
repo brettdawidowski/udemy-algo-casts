@@ -9,7 +9,6 @@
 //     q.remove(); // returns 1;
 
 class Queue {
-
       // Init Base Array as Queue
       constructor() { 
             this.q = [];
@@ -21,6 +20,10 @@ class Queue {
       // Using pop to remove the last item / Array.length - 1
       remove() {
             return this.q.pop();
+      }
+      // Accessing/Getter the next item in the Queue
+      peek() {
+            return this.q[this.q.length - 1];
       }
 }
 
