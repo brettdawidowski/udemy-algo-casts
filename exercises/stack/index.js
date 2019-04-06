@@ -10,6 +10,23 @@
 //   s.pop(); // returns 2
 //   s.pop(); // returns 1
 
-class Stack {}
+class Stack {
+      // Init with Base Array
+      constructor() {
+            this.s = [];
+      }
+      // Adding new item to top of Stack
+      push(item) {
+            this.s.push(item)
+      }
+      // Removing and returning top item in Stack
+      pop() {
+            return this.s.pop();
+      }
+      // Acessing/Getter of top item in Stack
+      peek() {
+            return this.s[this.s.length - 1];
+      }
+}
 
 module.exports = Stack;
