@@ -13,7 +13,34 @@
 //     q.remove(); // returns 2
 
 const Stack = require('./stack');
-
-class Queue {}
+class Queue {
+      // Init Two Stack Classes
+      constructor() {
+            this.l = new Stack();
+            this.r = new Stack();
+      }
+      // Always add to the left stack
+      add(item) {
+            this.l.push(item);
+      }
+      // Pop from the right if peek returns a value
+      // Move all from left over to right if peek is undefined
+      remove() {
+            if (this.r.peek()) return this.r.pop();
+            while (this.l.peek()) {
+                  this.r.push(this.l.pop());
+            }
+            return this.r.pop();
+      }
+      // Get from the right if peek returns a value
+      // Move all from left over to right if peek is undefined
+      peek() {
+            if (this.r.peek()) return this.r.peek();
+            while (this.l.peek()) {
+                  this.r.push(this.l.pop());
+            }
+            return this.r.peek();
+      }
+}
 
 module.exports = Queue;
