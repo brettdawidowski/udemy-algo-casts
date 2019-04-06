@@ -8,6 +8,20 @@
 //     q.add(1);
 //     q.remove(); // returns 1;
 
-class Queue {}
+class Queue {
+
+      // Init Base Array as Queue
+      constructor() { 
+            this.q = [];
+      }
+      // Using unshift to add item to begin / index 0 of Array
+      add(item) {
+            this.q.unshift(item);
+      }
+      // Using pop to remove the last item / Array.length - 1
+      remove() {
+            return this.q.pop();
+      }
+}
 
 module.exports = Queue;
