@@ -11,3 +11,6 @@ Udemy Course: [coding-interview-bootcamp-algorithms-and-data-structure](https://
 * [Tree Algorithms](notes/tree.md)
 * [Sorting Algorithms](notes/sorting.md)
 * [Design Question](notes/design-question.md)
+
+## Certificate
+![Certificate for completing the Coding Interview Bootcamp on Udemy](https://udemy-certificate.s3.amazonaws.com/image/UC-MU277AOF.jpg)
